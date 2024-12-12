@@ -1,0 +1,29 @@
+name: Trello UI Regression - PythonPlaywright with Pytest and Allure reports
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-lates
+
+    steps:
+      - uses: action/checkout@v4
+
+      - name: Checkout (copy) gh-pages to Github runner
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: ./.github/gh-pages
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          paython-version: 3.12
+
+      - name: Install dependencies
+        run: |
+          python -m pip --upgrade pip
+          pip install -r requirements.txt
+          npm install -g allure-commandline --save-dev
+
+      - name: Run tests
+        run: |
+          pytest -m health
