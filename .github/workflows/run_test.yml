@@ -34,10 +34,10 @@ jobs:
           pytest -m TC001 --alluredir allure-results
         continue-on-error: true
 
-      - name: Copy history from gh-pages to Allure-results
-        run: |
-          sudo mkdir -p allure-results/history
-          sudo cp -R ./.github/gh-pages/history/* allure-results/history/
+#      - name: Copy history from gh-pages to Allure-results
+#        run: |
+#          sudo mkdir -p allure-results/history
+#          sudo cp -R ./.github/gh-pages/history/* allure-results/history/
 
       - name: Generate Allure-report
         run:
