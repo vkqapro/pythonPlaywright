@@ -1,0 +1,4 @@
+[35mDEBUG   [0m asyncio:selector_events.py:64 Using selector: KqueueSelector
+[32mINFO    [0m root:test_ui_regression.py:38 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[32mINFO    [0m root:test_ui_regression.py:39 635767
+[32mINFO    [0m root:test_ui_regression.py:48 https://trello.com/u/vkqapro/boards

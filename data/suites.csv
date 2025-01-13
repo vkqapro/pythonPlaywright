@@ -1,0 +1,2 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","15371","Log in to Trello account","tests.regression_UI","Mon Jan 13 19:29:59 UTC 2025","passed","Mon Jan 13 19:30:14 UTC 2025","TestUiRegression","test_ui_regression","",""
