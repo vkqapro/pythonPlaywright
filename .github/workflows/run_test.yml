@@ -26,5 +26,7 @@ jobs:
           playwright install
 
       - name: Run tests
+        env:
+          USER_EMAIL: ${{ secrets.USER_EMAIL }}
         run: |
           pytest -m TC000
