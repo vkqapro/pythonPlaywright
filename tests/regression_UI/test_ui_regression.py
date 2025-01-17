@@ -100,11 +100,13 @@ class TestUiRegression(BaseTest):
             page.locator(self.locator.Board.BOARD_TITLE).click()
 
         with allure.step('Create a new card'):
+            time.sleep(3)
             page.locator(self.locator.List.ADD_A_CARD_BUTTON).click()
             page.locator(self.locator.List.CARD_NAME_FIELD).fill("new_card_playwright")
             page.locator(self.locator.List.ADD_CARD_SUBMIT_BUTTOMN).click()
 
         with allure.step('Verifying the new card creation'):
+            time.sleep(2)
             expect(page.locator(self.locator.List.NEW_CARD_TITLE)).to_contain_text('new_card_playwright')
 
     @pytest.mark.TC000
