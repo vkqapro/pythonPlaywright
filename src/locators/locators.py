@@ -50,9 +50,9 @@ class Locators(object):
         BOARD_TITLE = "//*/div[@title='new_board_playwright']"
         NEW_BOARD_CREATED = "//h1[contains(text(),'new_board_playwright')]"
         # BOARD_TITLE = "//body/div[@id='trello-root']/div[@id='chrome-container']/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/ul[1]/li[1]/a[1]"
-        ADD_A_LIST_BUTTON = "//*[contains(text(), 'Add a list')]"
-        ENTER_LIST_NAME_FIELD = "//*[@name='Enter list name…']"
-        ADD_LIST_SUBMIT_BUTTON = "//*[@data-testid='list-composer-add-list-button']"
+        ADD_A_LIST_BUTTON = "//button[contains(text(), 'Add a list')]"
+        ENTER_LIST_NAME_FIELD = "//textarea[@name='Enter list name…']"
+        ADD_LIST_SUBMIT_BUTTON = "//button[@data-testid='list-composer-add-list-button']"
         LIST_TITLE = "//*[contains(text(), 'new_list_playwright')][1]"
         ADD_ANOTHER_LIST_BUTTON = "//button[@data-testid='list-composer-button']"
 

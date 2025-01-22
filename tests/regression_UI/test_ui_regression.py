@@ -80,7 +80,8 @@ class TestUiRegression(BaseTest):
         with allure.step('Opening the board and creating a new list'):
             time.sleep(3)
             page.locator(self.locator.Board.BOARD_TITLE).click()
-            page.locator(self.locator.Board.ADD_A_LIST_BUTTON).click()
+            page.get_by_role('button', name='Add a list').click()
+            # page.locator(self.locator.Board.ADD_A_LIST_BUTTON).click()
             page.locator(self.locator.Board.ENTER_LIST_NAME_FIELD).fill('new_list_playwright')
             page.locator(self.locator.Board.ADD_LIST_SUBMIT_BUTTON).click()
 
