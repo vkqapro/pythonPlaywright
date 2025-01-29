@@ -83,7 +83,7 @@ class Locators(object):
         SEARCH_FIELD = "//*[@placeholder='Search']"
         ADVANCE_SEARCH_BUTTON = "//*[contains(text(), 'Advanced search')]"
         ADVANCE_SEARCH_FIELD = "//div/input[@data-testid='advanced-search-input']"
-        BOARD_FOUND_IN_SEARCH = "//a[1]/span/span[2]/span/span/span/div/span[contains(text(), 'new_board_playwright')]"
+        BOARD_FOUND_IN_SEARCH = "//a[1]/span/span/span/span/span/div/span[contains(text(), 'new_board_playwright')]"
 
     class Account:
         ACCOUNT_MENU = "//div/button[@aria-label='Open member menu']"
