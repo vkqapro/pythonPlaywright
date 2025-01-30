@@ -57,7 +57,8 @@ class Locators(object):
         ADD_ANOTHER_LIST_BUTTON = "//button[@data-testid='list-composer-button']"
 
     class List:
-        ADD_A_CARD_BUTTON = "//button[contains(text(), 'Add a card')]"
+        # ADD_A_CARD_BUTTON = "//button[contains(text(), 'Add a card')]"
+        ADD_A_CARD_BUTTON = "//*[@data-testid='list']/div[3]/button[1]"
         CARD_NAME_FIELD = "//*[@placeholder='Enter a title or paste a link']"
         ADD_CARD_SUBMIT_BUTTOMN = "//button[contains(text(), 'Add card')]"
         NEW_CARD_TITLE = "//*[contains(text(), 'new_card_playwright')]"
