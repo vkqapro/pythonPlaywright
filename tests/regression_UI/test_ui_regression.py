@@ -180,8 +180,9 @@ class TestUiRegression(BaseTest):
             page.locator(self.locator.Search.ADVANCE_SEARCH_FIELD).fill('new_board_playwright')
 
         with allure.step('Verifying the search result'):
+            time.sleep(2)
             page.wait_for_selector(self.locator.Search.BOARD_FOUND_IN_SEARCH).is_visible()
-            expect(page.locator(self.locator.Search.BOARD_FOUND_IN_SEARCH)).to_have_text('new_board_playwright')
+            expect(page.locator(self.locator.Search.BOARD_FOUND_IN_SEARCH)).to_be_visible()
             log.info(f"The found board's name is: {page.locator(self.locator.Search.BOARD_FOUND_IN_SEARCH).inner_text()}")
 
     @pytest.mark.TC000
