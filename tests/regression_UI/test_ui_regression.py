@@ -102,7 +102,7 @@ class TestUiRegression(BaseTest):
             page.locator(self.locator.Board.BOARD_TITLE).click()
 
         with allure.step('Create a new card'):
-            time.sleep(3)
+            page.wait_for_selector(self.locator.List.ADD_A_CARD_BUTTON).is_visible()
             page.locator(self.locator.List.ADD_A_CARD_BUTTON).click()
             page.locator(self.locator.List.CARD_NAME_FIELD).fill("new_card_playwright")
             page.locator(self.locator.List.ADD_CARD_SUBMIT_BUTTOMN).click()
