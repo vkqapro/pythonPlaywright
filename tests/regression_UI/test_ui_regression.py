@@ -173,8 +173,11 @@ class TestUiRegression(BaseTest):
             self.test_log_in_functionality(page)
 
         with allure.step('Search a board'):
+            page.wait_for_selector(self.locator.Search.SEARCH_FIELD).is_visible()
             page.locator(self.locator.Search.SEARCH_FIELD).click()
+            page.wait_for_selector(self.locator.Search.ADVANCE_SEARCH_BUTTON).is_visible()
             page.locator(self.locator.Search.ADVANCE_SEARCH_BUTTON).click()
+            page.wait_for_selector(self.locator.Search.ADVANCE_SEARCH_FIELD).is_visible()
             page.locator(self.locator.Search.ADVANCE_SEARCH_FIELD).fill('new_board_playwright')
 
         with allure.step('Verifying the search result'):
