@@ -34,7 +34,12 @@ jobs:
           USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
         run: |
-          pytest -m TC000 --alluredir allure-results --tracing on
+          pytest -m TC002 --alluredir allure-results --tracing=retain-on-failure
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-traces
+          path: test-results/
 
         continue-on-error: true
 
