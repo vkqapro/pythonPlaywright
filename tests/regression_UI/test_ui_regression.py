@@ -81,7 +81,6 @@ class TestUiRegression(BaseTest):
             time.sleep(3)
             page.locator(self.locator.Board.BOARD_TITLE).click()
             page.get_by_role('button', name='Add a list').click()
-            # page.locator(self.locator.Board.ADD_A_LIST_BUTTON).click()
             page.locator(self.locator.Board.ENTER_LIST_NAME_FIELD).fill('new_list_playwright')
             page.locator(self.locator.Board.ADD_LIST_SUBMIT_BUTTON).click()
 
@@ -193,11 +192,17 @@ class TestUiRegression(BaseTest):
             self.test_log_in_functionality(page)
 
         with allure.step('Board deletion'):
+            page.wait_for_selector(self.locator.Board.BOARD_TITLE).is_visible()
             page.locator(self.locator.Board.BOARD_TITLE).click()
+            page.wait_for_selector(self.locator.List.SHOW_MENU).is_visible()
             page.locator(self.locator.List.SHOW_MENU).click()
+            page.wait_for_selector(self.locator.List.IN_MENU_CLOSE_BOARD).is_visible()
             page.locator(self.locator.List.IN_MENU_CLOSE_BOARD).click()
+            page.wait_for_selector(self.locator.List.IN_MENU_PROVE_CLOSE_BOARD).is_visible()
             page.locator(self.locator.List.IN_MENU_PROVE_CLOSE_BOARD).click()
+            page.wait_for_selector(self.locator.List.IN_MENU_PERMANENT_DELETE).is_visible()
             page.locator(self.locator.List.IN_MENU_PERMANENT_DELETE).click()
+            page.wait_for_selector(self.locator.List.IN_MENU_CONFIRM_PERMANENT_DELETE).is_visible()
             page.locator(self.locator.List.IN_MENU_CONFIRM_PERMANENT_DELETE).click()
 
         with allure.step('Verifying that the board is deleted'):
