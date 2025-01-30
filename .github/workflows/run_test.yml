@@ -1,8 +1,7 @@
 name: Trello UI Regression - PythonPlaywright with Pytest and Allure reports
-on: workflow_dispatch
-
-#  schedule:
-#    - cron: "20 */3 * * *"
+on:
+  schedule:
+    - cron: "20 */3 * * *"
 jobs:
   build:
     runs-on: ubuntu-latest
