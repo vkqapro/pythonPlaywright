@@ -37,7 +37,7 @@ class TestUiRegression(BaseTest):
                     page.locator(self.locator.LoginPage.LOGIN_BUTTON).click()
                     log.info("+++++" * 20)
                     log.info(self.otp_auth())
-                    time.sleep(10)
+                    time.sleep(8)
                     page.locator(self.locator.LoginPage.SIX_OTP_CODE_FIELD).clear()
                     page.locator(self.locator.LoginPage.SIX_OTP_CODE_FIELD).fill(self.otp_auth())
                     time.sleep(3)
