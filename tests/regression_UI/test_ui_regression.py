@@ -165,7 +165,7 @@ class TestUiRegression(BaseTest):
         with allure.step('Verifying that the card is deleted'):
             expect(page.locator(self.locator.List.CARD_TO_ARCHIVE)).not_to_be_visible()
 
-    # @pytest.mark.TC000
+    @pytest.mark.TC000
     @pytest.mark.TC008
     @allure.title('Search functionality')
     def test_search_functionality(self, page: Page):
@@ -182,7 +182,7 @@ class TestUiRegression(BaseTest):
             expect(page.locator(self.locator.Search.BOARD_FOUND_IN_SEARCH)).to_have_text('new_board_playwright')
             log.info(f"The found board's name is: {page.locator(self.locator.Search.BOARD_FOUND_IN_SEARCH).inner_text()}")
 
-    # @pytest.mark.TC000
+    @pytest.mark.TC000
     @pytest.mark.TC009
     @allure.title('Delete a board')
     def test_delete_board(self, page: Page):
@@ -200,7 +200,7 @@ class TestUiRegression(BaseTest):
         with allure.step('Verifying that the board is deleted'):
             expect(page.locator(self.locator.Board.BOARD_TITLE_DELETED)).not_to_be_visible()
 
-    # @pytest.mark.TC000
+    @pytest.mark.TC000
     @pytest.mark.TC010
     @allure.title('Log out functionality')
     def test_logged_out(self, page: Page):
