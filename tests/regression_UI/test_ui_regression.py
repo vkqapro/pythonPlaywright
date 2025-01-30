@@ -65,7 +65,7 @@ class TestUiRegression(BaseTest):
             page.locator(self.locator.HomePage.CREATE_SUBMIT_BUTTON).click()
 
         with allure.step('Verifying the board creation'):
-            expect(page.locator(self.locator.Board.NEW_BOARD_CREATED)).to_contain_text('new_board_playwright')
+            expect(page.locator(self.locator.Board.NEW_BOARD_CREATED)).to_have_text('new_board_playwright')
             new_board_title = page.locator(self.locator.Board.NEW_BOARD_CREATED).inner_text()
             log.info('===' * 50)
             log.info(new_board_title)
@@ -86,7 +86,8 @@ class TestUiRegression(BaseTest):
             page.locator(self.locator.Board.ADD_LIST_SUBMIT_BUTTON).click()
 
         with allure.step('Verifying that the new list is created'):
-            expect(page.locator(self.locator.Board.LIST_TITLE)).to_contain_text('new_list_playwright')
+            expect(page.locator(self.locator.Board.LIST_TITLE)).to_have_text('new_list_playwright')
+            log.info(f'The list was created: {page.locator(self.locator.Board.LIST_TITLE).inner_text()}')
 
 
     @pytest.mark.TC000
@@ -108,7 +109,7 @@ class TestUiRegression(BaseTest):
 
         with allure.step('Verifying the new card creation'):
             time.sleep(2)
-            expect(page.locator(self.locator.List.NEW_CARD_TITLE)).to_contain_text('new_card_playwright')
+            expect(page.locator(self.locator.List.NEW_CARD_TITLE)).to_have_text('new_card_playwright')
 
     @pytest.mark.TC000
     @pytest.mark.TC005
@@ -129,7 +130,7 @@ class TestUiRegression(BaseTest):
             page.locator(self.locator.List.NEW_CARD_TITLE).drag_to(page.locator(self.locator.List.DROP_LOCATION_LIST))
 
         with allure.step('Verifying that the card is dropped to another list'):
-            expect(page.locator(self.locator.List.CARD_LOCATION_ON_ANOTHER_LIST)).to_contain_text('new_card_playwright')
+            expect(page.locator(self.locator.List.CARD_LOCATION_ON_ANOTHER_LIST)).to_have_text('new_card_playwright')
 
     @pytest.mark.TC000
     @pytest.mark.TC006
@@ -164,7 +165,7 @@ class TestUiRegression(BaseTest):
         with allure.step('Verifying that the card is deleted'):
             expect(page.locator(self.locator.List.CARD_TO_ARCHIVE)).not_to_be_visible()
 
-    @pytest.mark.TC000
+    # @pytest.mark.TC000
     @pytest.mark.TC008
     @allure.title('Search functionality')
     def test_search_functionality(self, page: Page):
@@ -177,9 +178,11 @@ class TestUiRegression(BaseTest):
             page.locator(self.locator.Search.ADVANCE_SEARCH_FIELD).fill('new_board_playwright')
 
         with allure.step('Verifying the search result'):
-            expect(page.locator(self.locator.Search.BOARD_FOUND_IN_SEARCH)).to_be_visible()
+            page.wait_for_selector(self.locator.Search.BOARD_FOUND_IN_SEARCH).is_visible()
+            expect(page.locator(self.locator.Search.BOARD_FOUND_IN_SEARCH)).to_have_text('new_board_playwright')
+            log.info(f"The found board's name is: {page.locator(self.locator.Search.BOARD_FOUND_IN_SEARCH).inner_text()}")
 
-    @pytest.mark.TC000
+    # @pytest.mark.TC000
     @pytest.mark.TC009
     @allure.title('Delete a board')
     def test_delete_board(self, page: Page):
@@ -192,12 +195,12 @@ class TestUiRegression(BaseTest):
             page.locator(self.locator.List.IN_MENU_CLOSE_BOARD).click()
             page.locator(self.locator.List.IN_MENU_PROVE_CLOSE_BOARD).click()
             page.locator(self.locator.List.IN_MENU_PERMANENT_DELETE).click()
-            page.locator(self.locator.List.IN_MENU_PERMANENT_DELETE).click()
+            page.locator(self.locator.List.IN_MENU_CONFIRM_PERMANENT_DELETE).click()
 
         with allure.step('Verifying that the board is deleted'):
             expect(page.locator(self.locator.Board.BOARD_TITLE_DELETED)).not_to_be_visible()
 
-    @pytest.mark.TC000
+    # @pytest.mark.TC000
     @pytest.mark.TC010
     @allure.title('Log out functionality')
     def test_logged_out(self, page: Page):
