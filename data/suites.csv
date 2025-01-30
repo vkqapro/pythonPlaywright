@@ -1,3 +1,3 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","19088","Board Creation","tests.regression_UI","Thu Jan 30 19:36:04 UTC 2025","passed","Thu Jan 30 19:36:23 UTC 2025","TestUiRegression","test_ui_regression","",""
 "","15860","Log in to Trello account","tests.regression_UI","Mon Jan 13 18:46:38 UTC 2025","passed","Mon Jan 13 18:46:54 UTC 2025","TestUiRegression","test_ui_regression","",""
+"","19113","Board Creation","tests.regression_UI","Thu Jan 30 19:42:42 UTC 2025","passed","Thu Jan 30 19:43:01 UTC 2025","TestUiRegression","test_ui_regression","",""
