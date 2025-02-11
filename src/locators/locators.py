@@ -64,7 +64,7 @@ class Locators(object):
         NEW_CARD_TITLE = "//*[contains(text(), 'new_card_playwright')]"
         DROP_LOCATION_LIST = "//ol/li[2][@data-testid='list-wrapper']"
         CARD_LOCATION_ON_ANOTHER_LIST = "//div/ol/li[2]/div/ol/li[1]"
-        CARD_TO_ARCHIVE = "//div/ol/li[2]/div/ol/li/div/div[1]/a[contains(text(), 'new_card_playwright')]"
+        CARD_TO_ARCHIVE = "//*[contains(text(), 'new_card_playwright')]"
         ARCHIVE_BUTTON = "//button[@data-testid='card-back-archive-button']"
         DELETE_BUTTON = "//button[contains(text(), 'Delete')]"
         DELETE_CONFIRM_BUTTON = "//button[@data-testid='popover-confirm-button' and contains(text(), 'Delete')]"
