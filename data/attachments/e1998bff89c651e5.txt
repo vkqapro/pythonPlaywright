@@ -1,7 +1,7 @@
 INFO     root:test_ui_regression.py:38 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO     root:test_ui_regression.py:39 608143
+INFO     root:test_ui_regression.py:39 406153
 INFO     root:test_ui_regression.py:38 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO     root:test_ui_regression.py:39 023177
+INFO     root:test_ui_regression.py:39 696427
 INFO     root:test_ui_regression.py:48 https://trello.com/u/vkqapro/boards
 INFO     root:test_ui_regression.py:187 The found board's name is: new_board_playwright
 UI_API_Mobile_Testing
