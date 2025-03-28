@@ -1,5 +1,5 @@
 INFO     root:test_ui_regression.py:38 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO     root:test_ui_regression.py:39 120968
+INFO     root:test_ui_regression.py:39 869305
 INFO     root:test_ui_regression.py:38 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO     root:test_ui_regression.py:39 943612
+INFO     root:test_ui_regression.py:39 313159
 INFO     root:test_ui_regression.py:48 https://trello.com/u/vkqapro/boards
