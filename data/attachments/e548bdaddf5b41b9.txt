@@ -1,6 +1,5 @@
 INFO     root:test_ui_regression.py:38 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO     root:test_ui_regression.py:39 939373
+INFO     root:test_ui_regression.py:39 442067
 INFO     root:test_ui_regression.py:38 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO     root:test_ui_regression.py:39 928123
+INFO     root:test_ui_regression.py:39 868534
 INFO     root:test_ui_regression.py:48 https://trello.com/u/vkqapro/boards
-INFO     root:test_ui_regression.py:89 The list was created: new_list_playwright
