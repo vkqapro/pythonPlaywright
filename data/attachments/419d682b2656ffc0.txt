@@ -1,4 +1,4 @@
 DEBUG    asyncio:selector_events.py:64 Using selector: EpollSelector
 INFO     root:test_ui_regression.py:38 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-INFO     root:test_ui_regression.py:39 385726
+INFO     root:test_ui_regression.py:39 365307
 INFO     root:test_ui_regression.py:48 https://trello.com/u/vkqapro/boards
