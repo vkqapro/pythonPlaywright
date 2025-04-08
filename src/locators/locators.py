@@ -47,7 +47,8 @@ class Locators(object):
 
     class Board:
         BOARD_TITLE_DELETED = "//*/div[@title='new_board_playwright']"
-        BOARD_TITLE = "//*/div[@title='new_board_playwright']"
+        # BOARD_TITLE = "//*/div[@title='new_board_playwright']"
+        BOARD_TITLE = "new_board_playwright"
         NEW_BOARD_CREATED = "//h1[contains(text(),'new_board_playwright')]"
         # BOARD_TITLE = "//body/div[@id='trello-root']/div[@id='chrome-container']/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/div[2]/ul[1]/li[1]/a[1]"
         ADD_A_LIST_BUTTON = "//button[contains(text(), 'Add a list')]"

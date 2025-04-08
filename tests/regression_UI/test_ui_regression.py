@@ -79,7 +79,7 @@ class TestUiRegression(BaseTest):
 
         with allure.step('Opening the board and creating a new list'):
             time.sleep(3)
-            page.locator(self.locator.Board.BOARD_TITLE).click()
+            page.get_by_title(self.locator.Board.BOARD_TITLE).first.click()
             page.get_by_role('button', name='Add a list').click()
             page.locator(self.locator.Board.ENTER_LIST_NAME_FIELD).fill('new_list_playwright')
             page.locator(self.locator.Board.ADD_LIST_SUBMIT_BUTTON).click()
@@ -98,7 +98,7 @@ class TestUiRegression(BaseTest):
 
         with allure.step('Open the board and the list'):
             time.sleep(3)
-            page.locator(self.locator.Board.BOARD_TITLE).click()
+            page.get_by_title(self.locator.Board.BOARD_TITLE).first.click()
 
         with allure.step('Create a new card'):
             time.sleep(5)
@@ -120,7 +120,7 @@ class TestUiRegression(BaseTest):
 
         with allure.step('Open the board and the list'):
             time.sleep(3)
-            page.locator(self.locator.Board.BOARD_TITLE).click()
+            page.get_by_title(self.locator.Board.BOARD_TITLE).first.click()
 
         with allure.step('Drag and drop card'):
             page.locator(self.locator.Board.ADD_ANOTHER_LIST_BUTTON).click()
@@ -139,7 +139,7 @@ class TestUiRegression(BaseTest):
         with allure.step('Log in to Trello account'):
             self.test_log_in_functionality(page)
         with allure.step('Label a card'):
-            page.locator(self.locator.Board.BOARD_TITLE).click()
+            page.get_by_title(self.locator.Board.BOARD_TITLE).first.click()
             page.locator(self.locator.List.CARD_TO_ARCHIVE).click()
             page.locator(self.locator.List.LABELS_BUTTON).click()
             page.locator(self.locator.List.LABEL_GREEN).click()
@@ -155,7 +155,7 @@ class TestUiRegression(BaseTest):
             self.test_log_in_functionality(page)
 
         with allure.step('Archive a card'):
-            page.locator(self.locator.Board.BOARD_TITLE).click()
+            page.get_by_title(self.locator.Board.BOARD_TITLE).first.click()
             time.sleep(2)
             page.locator(self.locator.List.CARD_TO_ARCHIVE).click()
             page.locator(self.locator.List.ARCHIVE_BUTTON).click()
@@ -194,8 +194,8 @@ class TestUiRegression(BaseTest):
             self.test_log_in_functionality(page)
 
         with allure.step('Board deletion'):
-            page.wait_for_selector(self.locator.Board.BOARD_TITLE).is_visible()
-            page.locator(self.locator.Board.BOARD_TITLE).click()
+            # page.wait_for_selector(self.locator.Board.BOARD_TITLE).is_visible()
+            page.get_by_title(self.locator.Board.BOARD_TITLE).first.click()
             page.wait_for_selector(self.locator.List.SHOW_MENU).is_visible()
             page.locator(self.locator.List.SHOW_MENU).click()
             page.wait_for_selector(self.locator.List.IN_MENU_CLOSE_BOARD).is_visible()
